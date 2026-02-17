@@ -42,7 +42,6 @@ function sod_filter_lp_no_required_enroll_postmeta_to_always_return_true( $value
 		return $value;
 	}
 
-	// return $value;
 	return 'yes';
 }
 add_filter( 'get_post_metadata', 'sod_filter_lp_no_required_enroll_postmeta_to_always_return_true', 10, 4 );
@@ -74,7 +73,16 @@ function sod_filter_lp_retake_count_postmeta_to_always_return_unlimited( $value,
 		return $value;
 	}
 
-	// return $value;
+	$object = get_post($object_id);
+	
+	if (!is_a( $object, 'WP_Post')) {
+		return $value;
+	}
+
+	if ('lp_quiz' !== $object->post_type) {
+		return $value;
+	}
+
 	return '-1';
 }
 add_filter( 'get_post_metadata', 'sod_filter_lp_retake_count_postmeta_to_always_return_unlimited', 10, 4 );
