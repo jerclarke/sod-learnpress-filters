@@ -2,6 +2,7 @@
 /*
 Plugin Name: School of Data LearnPress Filters
 Plugin URI: https://schoolofdata.org/
+Github URI: https://github.com/jerclarke/sod-learnpress-filters
 Description: Tiny plugin created by Jer Clarke to filter default behavior of LearnPress courses and quizzes. Specifically: 1) Filter all courses to enable the PRICES > "There is no enrollment requirement" setting, so that courses can be taken without logging in. 2) Filter all quizzes to set "Retake" to "-1", so that users can re-take a quiz if they want to rather than being locked out. If this plugin is disabled, please review the settings on each Course and Quiz to ensure they are whatever is desired.
 Version: 1.0
 Requires at least: 5.8
